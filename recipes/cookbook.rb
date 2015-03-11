@@ -62,6 +62,20 @@ template "#{cookbook_dir}/spec/unit/recipes/default_spec.rb" do
   action :create_if_missing
 end
 
+directory "#{cookbook_dir}/test/integration/default/data_bags" do
+  recursive true
+end
+
+cookbook_file "#{cookbook_dir}/test/integration/default/encrypted_data_bag_secret" do
+  source 'encrypted_data_bag_secret'
+  action :create_if_missing
+end
+
+cookbook_file "#{cookbook_dir}/Vagrantfile.erb" do
+  source 'Vagrantfile.erb'
+  action :create_if_missing
+end
+
 # Recipes
 
 directory "#{cookbook_dir}/recipes"
