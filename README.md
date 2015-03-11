@@ -4,7 +4,13 @@ Ce projet permet de simplifier la génération de plusieurs éléments liés au 
 
 ## Pré-requis
 
-* chefdk 4.0
+* chefdk 0.3.6
+* vagrant
+  * plugin vagrant-hostmanager
+  * plugin vagrant-cachier
+  * plugin vagrant-omnibus
+  * plugin vagrant-berkshelf
+* virtualbox
 
 ## Installation
 
